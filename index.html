@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dev_Board</title>
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-[#F4F7FF] p-4">
+
+<section id="mainContainer" class="max-w-7xl min-h-screen mx-auto px-4">
+
+<!-- HEADER -->
+<header id="headerSection" class="p-4 bg-white rounded-xl">
+<nav class="flex justify-between items-center">
+
+<div id="logoArea" class="flex items-center gap-2">
+<img class="w-[42px]" src="./assets/logo.png" alt="">
+<h3 class="text-2xl">Dev<span class="font-bold">Board</span></h3>
+</div>
+
+<div id="headerRight" class="flex items-center gap-6 md:gap-12">
+
+<div id="completedCounter" class="flex items-center gap-2">
+<img class="w-[25px]" src="./assets/checkbox.png" alt="">
+<h2 id="completedTaskNumber" class="text-xl font-bold">00</h2>
+</div>
+
+<div id="themeButton">
+<img src="./assets/theme-btn.png" alt="">
+</div>
+
+</div>
+</nav>
+</header>
+
+<!-- HERO CARDS -->
+<div id="heroSection" class="mt-6 ">
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+
+<!-- task assigned -->
+<div id="taskAssignedCard" class="flex items-center justify-center rounded-lg p-4 gap-4 bg-[#F4F7FF]">
+
+<img class="w-[25px]" src="./assets/checkbox.png" alt="">
+
+<div>
+<h1>Task Assigned</h1>
+<h2 id="taskAssignedNumber" class="text-xl font-bold">00</h2>
+</div>
+
+</div>
+
+<!-- discover -->
+<div id="discoverCard"
+class="flex cursor-pointer items-center justify-center rounded-lg p-4 gap-4 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]">
+
+<img class="w-[48px]" src="./assets/board.png" alt="">
+<h1 class="text-white text-xl text-center">
+Discover Something <br> Today!
+</h1>
+
+</div>
+
+<!-- date -->
+<div id="dateCard" class="flex items-center justify-center rounded-lg p-4 gap-4 bg-[#F4F7FF]">
+
+<img class="w-[25px]" src="./assets/calender.png" alt="">
+
+<div>
+<h1 id="dayName">Wed</h1>
+<h2 id="fullDate" class="text-xl font-bold">01-jan-2026</h2>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- MAIN GRID -->
+<div id="mainGrid" class="flex flex-col lg:flex-row gap-4">
+
+<!-- TASK CARDS -->
+<div id="taskCardContainer"
+class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
+
+<!-- CARD 1 -->
+<div id="card1" class="p-4 rounded-xl bg-[#F4F7FF] space-y-2">
+
+<div class="p-2 rounded-xl bg-white w-fit px-4 text-center">
+<h1>ShopEase</h1>
+</div>
+
+<h2 class="text-xl font-bold">Fix Mobile Button Issue</h2>
+
+<p class="p-2 rounded-xl bg-white h-[92px] overflow-auto">
+Debug using Chrome DevTools, check for overlapping elements,
+and ensure 
+</p>
+
+<div class="flex justify-between items-center mt-4">
+
+<div>
+<p>Deadline</p>
+<h1 class="text-lg font-bold">21 March 2025</h1>
+</div>
+
+<button id="completeBtn"
+class="completeBtn  btn bg-[#3752FD] rounded-xl border-none text-white">
+Complete
+</button>
+
+</div>
+</div>
+
+<!-- CARD 2 -->
+<div id="card2" class="p-4 rounded-xl bg-[#F4F7FF] space-y-2">
+
+<div class="p-2 rounded-xl bg-white w-fit px-4 text-center">
+<h1>CloudSync</h1>
+</div>
+
+<h2 class="text-xl font-bold">Add Dark Mode</h2>
+
+<p class="p-2 rounded-xl bg-white h-[92px] overflow-auto">
+Store the user's preference in localStorage, update CSS variables
+dynamical
+</p>
+
+<div class="flex justify-between items-center mt-4">
+
+<div>
+<p>Deadline</p>
+<h1 class="text-lg font-bold">21 March 2025</h1>
+</div>
+
+<button id="completeBtn"
+class="completeBtn  btn bg-[#3752FD] rounded-xl border-none text-white">
+Complete
+</button>
+
+</div>
+</div>
+
+<!-- CARD 3 -->
+<div id="card3" class="p-4 rounded-xl bg-[#F4F7FF] space-y-2">
+
+<div class="p-2 rounded-xl bg-white w-fit px-4 text-center">
+<h1>SwiftPay</h1>
+</div>
+
+<h2 class="text-xl font-bold">Optimize Home page</h2>
+
+<p class="p-2 rounded-xl bg-white h-[92px] overflow-auto">
+Debug using Chrome DevTools, check for overlapping elem
+</p>
+
+<div class="flex justify-between items-center mt-4">
+
+<div>
+<p>Deadline</p>
+<h1 class="text-lg font-bold">21 March 2025</h1>
+</div>
+
+<button id="completeBtn"
+class="completeBtn  btn bg-[#3752FD] rounded-xl border-none text-white">
+Complete
+</button>
+
+</div>
+</div>
+
+<!-- CARD 4 -->
+<div id="card4" class="p-4 rounded-xl bg-[#F4F7FF] space-y-2">
+
+<div class="p-2 rounded-xl bg-white w-fit px-4 text-center">
+<h1>Meta</h1>
+</div>
+
+<h2 class="text-xl font-bold">Add new emoji 🤲</h2>
+
+<p class="p-2 rounded-xl bg-white h-[92px] overflow-auto">
+Debug using Chrome DevTools, check for overlapping elements
+</p>
+
+<div class="flex justify-between items-center mt-4">
+
+<div>
+<p>Deadline</p>
+<h1 class="text-lg font-bold">21 March 2025</h1>
+</div>
+
+<button id="completeBtn"
+class="completeBtn  btn bg-[#3752FD] rounded-xl border-none text-white">
+Complete
+</button>
+
+</div>
+</div>
+
+<!-- CARD 5 -->
+<div id="card5" class="p-4 rounded-xl bg-[#F4F7FF] space-y-2">
+
+<div class="p-2 rounded-xl bg-white w-fit px-4 text-center">
+<h1>Google LLC</h1>
+</div>
+
+<h2 class="text-xl font-bold">Integrate OpenAI API</h2>
+
+<p class="p-2 rounded-xl bg-white h-[92px] overflow-auto">
+Debug using Chrome DevTools
+</p>
+
+<div class="flex justify-between items-center mt-4">
+
+<div>
+<p>Deadline</p>
+<h1 class="text-lg font-bold">21 March 2025</h1>
+</div>
+
+<button id="completeBtn"
+class="completeBtn  btn bg-[#3752FD] rounded-xl border-none text-white">
+Complete
+</button>
+
+</div>
+</div>
+
+<!-- CARD 6 -->
+<div id="card6" class="p-4 rounded-xl bg-[#F4F7FF] space-y-2">
+
+<div class="p-2 rounded-xl bg-white w-fit px-4 text-center">
+<h1>Glassdoor</h1>
+</div>
+
+<h2 class="text-xl font-bold">Improve Job searching</h2>
+
+<p class="p-2 rounded-xl bg-white h-[92px] overflow-auto">
+Debug using Chrome DevTools
+</p>
+
+<div class="flex justify-between items-center mt-4">
+
+<div>
+<p>Deadline</p>
+<h1 class="text-lg font-bold">21 March 2025</h1>
+</div>
+
+<button id="completeBtn"
+class="completeBtn  btn bg-[#3752FD] rounded-xl border-none text-white">
+Complete
+</button>
+
+</div>
+</div>
+
+</div>
+
+<!-- ACTIVITY LOG -->
+<div id="activityLogSection"
+class="p-4 bg-white rounded-xl w-full lg:w-[320px]">
+
+<div class="space-y-4">
+
+<div class="flex justify-center items-center gap-2">
+<img class="w-[16px]" src="./assets/activity.png" alt="">
+<h1 class="font-bold">Activity Log</h1>
+</div>
+
+<button id="clearHistoryBtn"
+class="btn bg-[#3752FD] text-white rounded-xl border-none w-full">
+Clear History
+</button>
+
+</div>
+
+<div id="activityHistory"
+class="bg-[#dde1f8] mt-4 p-3 rounded-lg">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="./js/theme.js"></script>
+<script src="./js/completeTask.js"></script>
+
+</body>
+</html>
